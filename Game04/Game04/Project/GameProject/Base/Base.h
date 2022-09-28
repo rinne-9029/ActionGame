@@ -125,7 +125,6 @@ public:
 	/// <returns>true:ÚG</returns>
 	static bool CollisionRect(Base* b1, Base* b2);
 
-
 	/// <summary>
 	/// ‹éŒ`‚Ì•\¦
 	/// </summary>
