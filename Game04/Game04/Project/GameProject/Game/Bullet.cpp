@@ -37,7 +37,7 @@ void Bullet::Collision(Base* b)
 	case eType_Field:
 		if (Map* m = dynamic_cast<Map*>(b)) {
 			int t = m->CollisionMap(m_pos);
-			if (t != 0) {
+			if (t != 2) {
 				m_pos = m_pos_old;
 				SetKill();
 			}
