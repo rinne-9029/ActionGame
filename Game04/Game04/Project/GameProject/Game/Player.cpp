@@ -7,11 +7,13 @@ Player::Player(const CVector2D& pos)
 	m_img = COPY_RESOURCE("Player", CImage);
 	m_pos = pos;
 	//’†S‚ğİ’è
-	m_img.SetCenter(16, 16);
+	m_img.SetCenter(14, 32.5);
 	//‹éŒ`‚ğİ’è
-	m_rect = CRect(-16, -16, 16, 16);
+	m_rect = CRect(-14, -32.5, 14, 32.5);
+	m_img.SetSize(28, 65);
 	//”¼Œa
 	m_rad = 16;
+
 }
 
 void Player::Update()
@@ -39,9 +41,10 @@ void Player::Update()
 	//‰ñ“]’l‚ğ‹tZ
 	m_ang = atan2(vec.x,vec.y);
 
-	if (PUSH(CInput::eMouseL)) {
+	/*if (PUSH(CInput::eMouseL)) {
 		Base::Add(new Bullet(eType_Player_Bullet, m_pos, m_ang, 4));
 	}
+	*/
 }
 
 void Player::Draw()
@@ -49,6 +52,7 @@ void Player::Draw()
 	m_img.SetPos(m_pos);
 	m_img.SetAng(m_ang);
 	m_img.Draw();
+	DrawRect();
 }
 
 void Player::Collision(Base* b)
