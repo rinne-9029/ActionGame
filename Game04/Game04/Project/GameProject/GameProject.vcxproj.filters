@@ -17,11 +17,17 @@
     <ClCompile Include="Game\Map.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="Title\Title.cpp">
-      <Filter>Title</Filter>
+    <ClCompile Include="Game\AnimData.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Trap.cpp">
+      <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="Game\Game.cpp">
       <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Title\Title.cpp">
+      <Filter>Title</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -32,7 +38,7 @@
       <UniqueIdentifier>{3f01e8b2-9cb0-43f7-a56b-0dde0f51209f}</UniqueIdentifier>
     </Filter>
     <Filter Include="Title">
-      <UniqueIdentifier>{c4f268a6-0bc4-4b60-93a1-24ea68876f04}</UniqueIdentifier>
+      <UniqueIdentifier>{7f1f11bd-da97-4e4a-8182-99006c82eeb0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -51,11 +57,17 @@
     <ClInclude Include="Game\Map.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="Title\Title.h">
-      <Filter>Title</Filter>
+    <ClInclude Include="Game\AnimData.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Trap.h">
+      <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="Game\Game.h">
       <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Title\Title.h">
+      <Filter>Title</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

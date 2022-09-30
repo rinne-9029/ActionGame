@@ -12,7 +12,7 @@ void Enemy::StateIdle()
 
 	if (player) {
 		//左移動
-		if (player->m_pos.x < m_pos.x ) {
+		if (player->m_pos.x < m_pos.x && player->m_pos.x > m_pos.x-100 && player->m_pos.y > m_pos.y - 100 && player->m_pos.y < m_pos.y + 100) {
 			//移動量を設定
 			m_pos.x += -move_speed;
 			//反転フラグ
@@ -20,7 +20,7 @@ void Enemy::StateIdle()
 			move_flag = true;
 		}
 		//右移動
-		if (player->m_pos.x > m_pos.x) {
+		if (player->m_pos.x > m_pos.x && player->m_pos.x<m_pos.x+100 && player->m_pos.y > m_pos.y - 100 && player->m_pos.y < m_pos.y + 100) {
 			//移動量を設定
 			m_pos.x += move_speed;
 			//反転フラグ
@@ -28,7 +28,7 @@ void Enemy::StateIdle()
 			move_flag = true;
 		}
 		//下移動
-		if (player->m_pos.y < m_pos.y) {
+		if (player->m_pos.y < m_pos.y && player->m_pos.y>m_pos.y-100 && player->m_pos.x > m_pos.x - 100 && player->m_pos.x < m_pos.x + 100) {
 			//移動量を設定
 			m_pos.y += -move_speed;
 			//反転フラグ
@@ -36,7 +36,7 @@ void Enemy::StateIdle()
 			move_flag = true;
 		}
 		//上移動
-		if (player->m_pos.y > m_pos.y) {
+		if (player->m_pos.y > m_pos.y && player->m_pos.y<m_pos.y+100 && player->m_pos.x > m_pos.x - 100 && player->m_pos.x < m_pos.x + 100) {
 			//移動量を設定
 			m_pos.y += move_speed;
 			//反転フラグ
@@ -71,7 +71,7 @@ Enemy::Enemy(const CVector2D& pos)
 void Enemy::Update()
 {
 	m_pos_old = m_pos;
-	//カウントアップ
+	/*//カウントアップ
 	m_cnt++;
 	//プレイヤーを取得
 	Base* b = Base::FindObject(eType_Player);
@@ -84,7 +84,7 @@ void Enemy::Update()
 			Base::Add(new Bullet(eType_Enemy_Bullet, m_pos, m_ang,4));
 			m_cnt = 0;
 		}
-	}
+	}*/
 	switch (m_state) {
 		//通常状態
 	case eState_Idle:
@@ -101,6 +101,7 @@ void Enemy::Draw()
 {
 	m_img.SetPos(m_pos);
 	m_img.Draw();
+	DrawRect();
 }
 
 void Enemy::Collision(Base* b)
@@ -109,10 +110,10 @@ void Enemy::Collision(Base* b)
 	case eType_Field:
 		if (Map* m = dynamic_cast<Map*>(b)) {
 			int t = m->CollisionMap((CVector2D(m_pos.x, m_pos_old.y)),m_rect);
-			if (t != 0)
+			if (t != 2)
 				m_pos.x = m_pos_old.x;
 			t = m->CollisionMap((CVector2D(m_pos_old.x, m_pos.y)),m_rect);
-			if (t != 0)
+			if (t != 2)
 				m_pos.y = m_pos_old.y;
 
 		}
