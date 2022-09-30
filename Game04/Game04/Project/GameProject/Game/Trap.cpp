@@ -10,10 +10,12 @@ Trap::Trap(const CVector2D& pos):
 	m_pos = pos;
 	//再生アニメーション設定
 	m_img.ChangeAnimation(0);
+	m_img.SetCenter(32, 0);
+	m_rect = CRect(-18, 0, 18, 64);
 
 }
 
-void Trap::Updata()
+void Trap::Update()
 {
 	//アニメーション更新
 	m_img.UpdateAnimation();
@@ -21,9 +23,12 @@ void Trap::Updata()
 
 void Trap::Draw()
 {
+	m_img.SetPos(m_pos);
 	m_img.Draw();
+	DrawRect();
 }
 
 void Trap::Collision(Base* b)
 {
-}
+	
+	}

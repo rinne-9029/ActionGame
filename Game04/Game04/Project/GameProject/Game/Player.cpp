@@ -1,7 +1,8 @@
 #include "Player.h"
 #include "Bullet.h"
 #include"Map.h"
-Player::Player(const CVector2D& pos)
+#include"Trap.h"
+Player::Player(const CVector2D& pos, bool flip)
 	:Base(eType_Player)
 {
 	m_img = COPY_RESOURCE("Player", CImage);
@@ -58,15 +59,29 @@ void Player::Draw()
 void Player::Collision(Base* b)
 {
 	switch (b->m_type) {
-	case eType_Field:
-		if (Map* m = dynamic_cast<Map*>(b)) {
-			int t = m->CollisionMap(CVector2D(m_pos.x,m_pos_old.y),m_rect);
-			if (t != 2)
-				m_pos.x = m_pos_old.x;
-			t = m->CollisionMap(CVector2D(m_pos_old.x, m_pos.y),m_rect);
-			if (t != 2)
-				m_pos.y = m_pos_old.y;
+		case eType_Field:
+			if (Map* m = dynamic_cast<Map*>(b)) {
+				int t = m->CollisionMap(CVector2D(m_pos.x,m_pos_old.y),m_rect);
+				if (t != 2)
+					m_pos.x = m_pos_old.x;
+				t = m->CollisionMap(CVector2D(m_pos_old.x, m_pos.y),m_rect);
+				if (t != 2)
+					m_pos.y = m_pos_old.y;
+			}
+			break;
+			//ゴール判定
+	case eType_Goal:
+		if (Base::CollisionRect(this, b)) {
+			SetKill();
 		}
 		break;
 	}
 }
+		//トラップに当たった処理
+	/*case  eType_Trap:
+		if (Trap* s = dynamic_cast<Trap*>(b)) {
+			if (Base::CollisionRect(this, s) {
+				SetKill();
+			}
+			break;
+		}*/
