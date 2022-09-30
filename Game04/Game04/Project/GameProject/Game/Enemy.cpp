@@ -56,6 +56,7 @@ Enemy::Enemy(const CVector2D& pos)
 {
 	m_img = COPY_RESOURCE("Enemy", CImage);
 	m_pos = pos;
+	m_pos_old = pos;
 	//‘å‚«‚³
 	m_img.SetSize(64, 64);
 	//’†S‚ğİ’è

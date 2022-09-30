@@ -6,6 +6,7 @@ Player::Player(const CVector2D& pos)
 {
 	m_img = COPY_RESOURCE("Player", CImage);
 	m_pos = pos;
+	m_pos_old = pos;
 	//’†S‚ğİ’è
 	m_img.SetCenter(32.5,14);
 	//‹éŒ`‚ğİ’è
