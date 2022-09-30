@@ -9,6 +9,7 @@
 #include "Game/Map.h"
 #include"Game/AnimData.h"
 #include"Game/Trap.h"
+#include"Title/Title.h"
 //--------------------------------------------
 //グローバル変数領域
 //--------------------------------------------
@@ -73,6 +74,7 @@ void Init(void)
 	ADD_RESOURCE("MapTip", CImage::CreateImage("Image/MapTip.png"));
 	ADD_RESOURCE("MapTip2", CImage::CreateImage("Image/MapTip2.png"));
 	ADD_RESOURCE("Trap", CImage::CreateImage("Image/Trap.png", trap_anim_data, 64, 64));
+	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
 
 	//プレイヤーの生成
 	Base::Add(new Player(CVector2D(32 * 3, 32 * 4)));
@@ -83,6 +85,8 @@ void Init(void)
 	//マップの生成
 	Base::Add(new Map());
 	Base::Add(new Trap(CVector2D(500, 300)));
+	//
+	Base::Add(new Title());
 
 
 
