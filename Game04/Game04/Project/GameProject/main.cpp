@@ -76,16 +76,8 @@ void Init(void)
 	ADD_RESOURCE("Trap", CImage::CreateImage("Image/Trap.png", trap_anim_data, 64, 64));
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
 
-	//プレイヤーの生成
-	Base::Add(new Player(CVector2D(32 * 3, 32 * 4)));
-	//敵の生成
-	Base::Add(new Enemy(CVector2D(32 * 3, 32 * 8)));
-	Base::Add(new Enemy(CVector2D(32 * 17, 32 * 14)));
-	Base::Add(new Enemy(CVector2D(32 * 37, 32 * 10)));
-	//マップの生成
-	Base::Add(new Map());
-	Base::Add(new Trap(CVector2D(500, 300)));
-	//
+	
+	//タイトルの生成
 	Base::Add(new Title());
 
 
