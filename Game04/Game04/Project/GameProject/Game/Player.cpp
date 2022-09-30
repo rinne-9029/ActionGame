@@ -7,10 +7,10 @@ Player::Player(const CVector2D& pos)
 	m_img = COPY_RESOURCE("Player", CImage);
 	m_pos = pos;
 	//中心を設定
-	m_img.SetCenter(14, 32.5);
+	m_img.SetCenter(32.5,14);
 	//矩形を設定
-	m_rect = CRect(-14, -32.5, 14, 32.5);
-	m_img.SetSize(28, 65);
+	m_rect = CRect(-32.5, -14, 32.5, 14);
+	m_img.SetSize(65,28);
 	//半径
 	m_rad = 16;
 
@@ -37,9 +37,9 @@ void Player::Update()
 		m_pos.y += speed;
 	}
 	//マウスへのベクトル
-	CVector2D vec = CInput::GetMousePoint() - m_pos;
+	//CVector2D vec = CInput::GetMousePoint() - m_pos;
 	//回転値を逆算
-	m_ang = atan2(vec.x,vec.y);
+	///m_ang = atan2(vec.x,vec.y);
 
 	/*if (PUSH(CInput::eMouseL)) {
 		Base::Add(new Bullet(eType_Player_Bullet, m_pos, m_ang, 4));
