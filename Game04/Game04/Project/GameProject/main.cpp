@@ -10,6 +10,7 @@
 #include"Game/AnimData.h"
 #include"Game/Trap.h"
 #include"Title/Title.h"
+#include"Game/Manual.h"
 //--------------------------------------------
 //グローバル変数領域
 //--------------------------------------------
@@ -75,7 +76,7 @@ void Init(void)
 	ADD_RESOURCE("MapTip2", CImage::CreateImage("Image/MapTip2.png"));
 	ADD_RESOURCE("Trap", CImage::CreateImage("Image/Trap.png", trap_anim_data, 64, 64));
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
-
+	ADD_RESOURCE("Manual", CImage::CreateImage("Image/Manual.png"));
 	
 	//タイトルの生成
 	Base::Add(new Title());

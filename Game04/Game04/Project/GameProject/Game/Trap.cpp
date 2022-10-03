@@ -8,6 +8,7 @@ Trap::Trap(const CVector2D& pos):
 	m_img = COPY_RESOURCE("Trap", CImage);
 	//座標設定
 	m_pos = pos;
+	m_pos_old = pos;
 	//再生アニメーション設定
 	m_img.ChangeAnimation(0);
 	m_img.SetCenter(32, 0);
