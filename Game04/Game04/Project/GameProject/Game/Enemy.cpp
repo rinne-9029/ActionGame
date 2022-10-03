@@ -12,7 +12,7 @@ void Enemy::StateIdle()
 
 	if (player) {
 		//左移動
-		if (player->m_pos.x < m_pos.x && player->m_pos.x > m_pos.x-100 && player->m_pos.y > m_pos.y - 100 && player->m_pos.y < m_pos.y + 100) {
+		if (player->m_pos.x < m_pos.x && player->m_pos.x > m_pos.x-200 && player->m_pos.y > m_pos.y - 200 && player->m_pos.y < m_pos.y + 200) {
 			//移動量を設定
 			m_pos.x += -move_speed;
 			//反転フラグ
@@ -20,7 +20,7 @@ void Enemy::StateIdle()
 			move_flag = true;
 		}
 		//右移動
-		if (player->m_pos.x > m_pos.x && player->m_pos.x<m_pos.x+100 && player->m_pos.y > m_pos.y - 100 && player->m_pos.y < m_pos.y + 100) {
+		if (player->m_pos.x > m_pos.x && player->m_pos.x<m_pos.x+200 && player->m_pos.y > m_pos.y - 200 && player->m_pos.y < m_pos.y + 200) {
 			//移動量を設定
 			m_pos.x += move_speed;
 			//反転フラグ
@@ -28,7 +28,7 @@ void Enemy::StateIdle()
 			move_flag = true;
 		}
 		//下移動
-		if (player->m_pos.y < m_pos.y && player->m_pos.y>m_pos.y-100 && player->m_pos.x > m_pos.x - 100 && player->m_pos.x < m_pos.x + 100) {
+		if (player->m_pos.y < m_pos.y && player->m_pos.y>m_pos.y-200 && player->m_pos.x > m_pos.x - 200 && player->m_pos.x < m_pos.x + 200) {
 			//移動量を設定
 			m_pos.y += -move_speed;
 			//反転フラグ
@@ -36,7 +36,7 @@ void Enemy::StateIdle()
 			move_flag = true;
 		}
 		//上移動
-		if (player->m_pos.y > m_pos.y && player->m_pos.y<m_pos.y+100 && player->m_pos.x > m_pos.x - 100 && player->m_pos.x < m_pos.x + 100) {
+		if (player->m_pos.y > m_pos.y && player->m_pos.y<m_pos.y+200 && player->m_pos.x > m_pos.x - 200 && player->m_pos.x < m_pos.x + 200) {
 			//移動量を設定
 			m_pos.y += move_speed;
 			//反転フラグ
@@ -62,7 +62,7 @@ Enemy::Enemy(const CVector2D& pos)
 	//中心を設定
 	m_img.SetCenter(32, 32);
 	//矩形当たり判定
-	m_rect = CRect(-32, -32, 32, 32);
+	m_rect = CRect(-28, -28, 28, 28);
 	//半径
 	m_rad = 32;
 	//通常状態へ
