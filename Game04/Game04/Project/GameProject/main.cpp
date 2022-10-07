@@ -74,7 +74,7 @@ void Init(void)
 	ADD_RESOURCE("Bullet2", CImage::CreateImage("Image/Bullet2.png"));
 	ADD_RESOURCE("MapTip", CImage::CreateImage("Image/MapTip.png"));
 	ADD_RESOURCE("MapTip2", CImage::CreateImage("Image/MapTip2.png"));
-	ADD_RESOURCE("Trap", CImage::CreateImage("Image/Trap.png", trap_anim_data, 64, 64));
+	//ADD_RESOURCE("Trap", CImage::CreateImage("Image/Trap.png",64, 64));
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
 	ADD_RESOURCE("Manual", CImage::CreateImage("Image/Manual.png"));
 	

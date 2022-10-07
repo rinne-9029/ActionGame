@@ -16,7 +16,7 @@ Game::Game():Base(eType_Scene) {
 	Base::Add(new Enemy(CVector2D(32 * 37, 32 * 10)));
 	//トラップの生成
 	Base::Add(new Trap(CVector2D(32*5, 32*4)));
-	Base::Add(new Trap(CVector2D(600, 300)));
+	//Base::Add(new Trap(CVector2D(600, 300)));
 	//マップの生成
 	Base::Add(new Map());
 }
