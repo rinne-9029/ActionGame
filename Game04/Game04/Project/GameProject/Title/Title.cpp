@@ -31,9 +31,9 @@ void Title::Update(){
 void Title::Draw(){
 	m_img.Draw();
 	//文字表示
-	m_title_text.Draw(64, 256, 0, 0, 0, "Title");
-	m_title_text.Draw(64, 512, 0, 0, 0, "Push Z");
-	m_title_text.Draw(128, 600, 0, 0, 0, "Push X");
-	m_title_text.Draw(128, 600, 0, 0, 0, "Push X");
-	m_title_text.Draw(128, 600, 0, 0, 0, "Push X");
+	m_title_text.Draw(400, 200, 0, 0, 0, "Title");
+	m_title_text.Draw(800, 600, 0, 0, 0, "Push Z");
+	m_title_text.Draw(200, 600, 0, 0, 0, "Push X");
+	m_title_text.Draw(200, 450, 0, 0, 0, "説明");
+	m_title_text.Draw(700, 450, 0, 0, 0, "ゲームスタート！");
 }

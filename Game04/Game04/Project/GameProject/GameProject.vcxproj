@@ -16,11 +16,14 @@
     <ClCompile Include="Game\Bullet.cpp" />
     <ClCompile Include="Game\Enemy.cpp" />
     <ClCompile Include="Game\Game.cpp" />
+    <ClCompile Include="Game\Goal.cpp" />
     <ClCompile Include="Game\Manual.cpp" />
     <ClCompile Include="Game\Map.cpp" />
     <ClCompile Include="Game\Player.cpp" />
     <ClCompile Include="Game\Trap.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Title\GameClear.cpp" />
+    <ClCompile Include="Title\GameOver.cpp" />
     <ClCompile Include="Title\Title.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -29,10 +32,13 @@
     <ClInclude Include="Game\Bullet.h" />
     <ClInclude Include="Game\Enemy.h" />
     <ClInclude Include="Game\Game.h" />
+    <ClInclude Include="Game\Goal.h" />
     <ClInclude Include="Game\Manual.h" />
     <ClInclude Include="Game\Map.h" />
     <ClInclude Include="Game\Player.h" />
     <ClInclude Include="Game\Trap.h" />
+    <ClInclude Include="Title\GameClear.h" />
+    <ClInclude Include="Title\GameOver.h" />
     <ClInclude Include="Title\Title.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

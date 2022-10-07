@@ -77,6 +77,7 @@ void Init(void)
 	ADD_RESOURCE("Trap", CImage::CreateImage("Image/Trap.png", trap_anim_data, 64, 64));
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
 	ADD_RESOURCE("Manual", CImage::CreateImage("Image/Manual.png"));
+	ADD_RESOURCE("Goal", CImage::CreateImage("Image/Goal.png"));
 	
 	//É^ÉCÉgÉãÇÃê∂ê¨
 	Base::Add(new Title());

@@ -27,5 +27,9 @@ void Manual::Draw(){
 	//画像表示
 	m_img.Draw();
 	//文字表示
-	m_title_text.Draw(64, 256, 0, 0, 0, "せつめい！");
+	m_title_text.Draw(64, 100, 0, 0, 0, "せつめい！");
+	m_title_text.Draw(64, 180, 0, 0, 0, "あなたは水中での作業中に");
+	m_title_text.Draw(64, 240, 0, 0, 0, "仲間とはぐれてしまった");
+	m_title_text.Draw(64, 320, 0, 0, 0, "襲い掛かってくる敵やトラップを");
+	m_title_text.Draw(64, 400, 0, 0, 0, "避けながら仲間のもとにたどり着け");
 }
