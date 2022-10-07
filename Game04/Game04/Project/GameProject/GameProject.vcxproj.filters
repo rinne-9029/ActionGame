@@ -29,7 +29,9 @@
     <ClCompile Include="Game\Manual.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="Game\Goal.cpp">
+    <ClCompile Include="Game\Effect.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>    <ClCompile Include="Game\Goal.cpp">
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="Title\GameClear.cpp">
@@ -37,8 +39,7 @@
     </ClCompile>
     <ClCompile Include="Title\GameOver.cpp">
       <Filter>Title</Filter>
-    </ClCompile>
-  </ItemGroup>
+    </ClCompile>  </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
       <UniqueIdentifier>{92d21a0f-3d8d-4a8b-8c39-31fd384788c0}</UniqueIdentifier>
@@ -78,7 +79,8 @@
     <ClInclude Include="Game\Manual.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="Game\Goal.h">
+      <Filter>Game</Filter>
+    </ClInclude>    <ClInclude Include="Game\Goal.h">
       <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="Title\GameClear.h">
@@ -86,6 +88,5 @@
     </ClInclude>
     <ClInclude Include="Title\GameOver.h">
       <Filter>Title</Filter>
-    </ClInclude>
-  </ItemGroup>
+    </ClInclude>  </ItemGroup>
 </Project>

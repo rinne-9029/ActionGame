@@ -15,6 +15,7 @@ Player::Player(const CVector2D& pos, bool flip)
 	m_img.SetSize(65,28);
 	//”¼Œa
 	m_rad = 16;
+	m_count = 0;
 
 }
 
@@ -39,14 +40,17 @@ void Player::Update()
 		m_pos.y += speed;
 	}
 	//ƒ}ƒEƒX‚Ö‚ÌƒxƒNƒgƒ‹
-	//CVector2D vec = CInput::GetMousePoint() - m_pos;
+	CVector2D vec = CInput::GetMousePoint() - m_pos;
 	//‰ñ“]’l‚ð‹tŽZ
-	///m_ang = atan2(vec.x,vec.y);
+	m_ang = atan2(vec.x,vec.y);
 
-	/*if (PUSH(CInput::eMouseL)) {
+	if (m_count<5&&PUSH(CInput::eMouseL)) {
 		Base::Add(new Bullet(eType_Player_Bullet, m_pos, m_ang, 4));
+		m_count++;
+		
+		
 	}
-	*/
+	
 }
 
 void Player::Draw()

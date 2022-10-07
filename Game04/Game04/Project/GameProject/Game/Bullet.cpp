@@ -1,5 +1,6 @@
 #include "Bullet.h"
 #include "Map.h"
+#include"Effect.h"
 
 Bullet::Bullet(int type,const CVector2D& pos,float ang,float speed)
 	:Base(type)
@@ -34,7 +35,7 @@ void Bullet::Draw()
 void Bullet::Collision(Base* b)
 {
 	switch (b->m_type) {
-	case eType_Field:
+	/*case eType_Field:
 		if (Map* m = dynamic_cast<Map*>(b)) {
 			int t = m->CollisionMap(m_pos);
 			if (t != 2) {
@@ -47,12 +48,14 @@ void Bullet::Collision(Base* b)
 		if (m_type == eType_Enemy_Bullet && Base::CollisionCircle(this, b)) {
 			SetKill();
 			b->SetKill();
+
 		}
-		break;
+		break;*/
 	case eType_Enemy:
-		if (m_type == eType_Player_Bullet && Base::CollisionCircle(this, b)) {
+		if (Base::CollisionCircle(this, b)) {
 			SetKill();
 			b->SetKill();
+			Base::Add(new Effect(b->m_pos));
 		}
 		break;
 	}
