@@ -9,7 +9,7 @@ Player::Player(const CVector2D& pos, bool flip)
 	m_pos = pos;
 	m_pos_old = pos;
 	//’†S‚ğİ’è
-	m_img.SetCenter(32.5,14);
+	m_img.SetCenter(32.5,28);
 	//‹éŒ`‚ğİ’è
 	m_rect = CRect(-32.5, -14, 32.5, 14);
 	m_img.SetSize(65,28);
