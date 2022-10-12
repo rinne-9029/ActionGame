@@ -35,16 +35,17 @@ void Bullet::Draw()
 void Bullet::Collision(Base* b)
 {
 	switch (b->m_type) {
-	/*case eType_Field:
+	case eType_Field:
 		if (Map* m = dynamic_cast<Map*>(b)) {
 			int t = m->CollisionMap(m_pos);
-			if (t != 2) {
-				m_pos = m_pos_old;
+			if (t != 1) {
+				if(t==3)
+					m->SetTip(m_pos, 1);
 				SetKill();
 			}
 		}
 		break;
-	case eType_Player:
+	/*case eType_Player:
 		if (m_type == eType_Enemy_Bullet && Base::CollisionCircle(this, b)) {
 			SetKill();
 			b->SetKill();

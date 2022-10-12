@@ -13,6 +13,8 @@ enum {
 	eType_Trap,
 	eType_Trap2,
 	eType_Manual,
+	eType_GameClear,
+	eType_GameOver,
 };
 
 //d—Í‰Á‘¬“x

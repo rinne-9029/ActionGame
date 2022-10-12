@@ -111,10 +111,10 @@ void Enemy::Collision(Base* b)
 	case eType_Field:
 		if (Map* m = dynamic_cast<Map*>(b)) {
 			int t = m->CollisionMap((CVector2D(m_pos.x, m_pos_old.y)),m_rect);
-			if (t != 2)
+			if (t != 1)
 				m_pos.x = m_pos_old.x;
 			t = m->CollisionMap((CVector2D(m_pos_old.x, m_pos.y)),m_rect);
-			if (t != 2)
+			if (t != 1)
 				m_pos.y = m_pos_old.y;
 
 		}

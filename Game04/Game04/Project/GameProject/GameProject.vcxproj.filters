@@ -5,33 +5,19 @@
     <ClCompile Include="Base\Base.cpp">
       <Filter>Base</Filter>
     </ClCompile>
-    <ClCompile Include="Game\Player.cpp">
+    <ClCompile Include="Game\Bullet.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Effect.cpp">
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="Game\Enemy.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="Game\Bullet.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\Map.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\Trap.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
     <ClCompile Include="Game\Game.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="Title\Title.cpp">
-      <Filter>Title</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\Manual.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\Effect.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>    <ClCompile Include="Game\Goal.cpp">
+    <ClCompile Include="Game\Goal.cpp">
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="Title\GameClear.cpp">
@@ -39,48 +25,37 @@
     </ClCompile>
     <ClCompile Include="Title\GameOver.cpp">
       <Filter>Title</Filter>
-    </ClCompile>  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="Base">
-      <UniqueIdentifier>{92d21a0f-3d8d-4a8b-8c39-31fd384788c0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game">
-      <UniqueIdentifier>{3f01e8b2-9cb0-43f7-a56b-0dde0f51209f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Title">
-      <UniqueIdentifier>{7f1f11bd-da97-4e4a-8182-99006c82eeb0}</UniqueIdentifier>
-    </Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Manual.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Map.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Player.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Title\Title.cpp">
+      <Filter>Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Trap.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base\Base.h">
       <Filter>Base</Filter>
     </ClInclude>
-    <ClInclude Include="Game\Player.h">
+    <ClInclude Include="Game\Bullet.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Effect.h">
       <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="Game\Enemy.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="Game\Bullet.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\Map.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\Trap.h">
-      <Filter>Game</Filter>
-    </ClInclude>
     <ClInclude Include="Game\Game.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Title\Title.h">
-      <Filter>Title</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\Manual.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-      <Filter>Game</Filter>
-    </ClInclude>    <ClInclude Include="Game\Goal.h">
       <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="Title\GameClear.h">
@@ -88,5 +63,35 @@
     </ClInclude>
     <ClInclude Include="Title\GameOver.h">
       <Filter>Title</Filter>
-    </ClInclude>  </ItemGroup>
+    </ClInclude>
+    <ClInclude Include="Game\Goal.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Manual.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Map.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Player.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Title\Title.h">
+      <Filter>Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Trap.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Base">
+      <UniqueIdentifier>{fbbbb713-5c1a-47d3-b5d6-b78be1283d58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{892d4295-9c38-449f-9bef-35383084a720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Title">
+      <UniqueIdentifier>{a50e9a3f-f353-44d9-b79f-524f36340ffe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
 </Project>
