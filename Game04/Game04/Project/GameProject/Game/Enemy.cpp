@@ -119,7 +119,7 @@ void Enemy::Collision(Base* b)
 
 		}
 		break;
-
+	
 	}
 
 }

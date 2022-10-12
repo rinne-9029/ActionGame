@@ -35,7 +35,7 @@ void Bullet::Draw()
 void Bullet::Collision(Base* b)
 {
 	switch (b->m_type) {
-	/*case eType_Field:
+	case eType_Field:
 		if (Map* m = dynamic_cast<Map*>(b)) {
 			int t = m->CollisionMap(m_pos);
 			if (t != 2) {
@@ -50,7 +50,7 @@ void Bullet::Collision(Base* b)
 			b->SetKill();
 
 		}
-		break;*/
+		break;
 	case eType_Enemy:
 		if (Base::CollisionCircle(this, b)) {
 			SetKill();
