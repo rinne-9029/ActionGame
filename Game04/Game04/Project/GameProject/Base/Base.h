@@ -11,8 +11,9 @@ enum {
 	eType_UI,
 	eType_Scene,
 	eType_Trap,
-	eType_Trap2,
+	eType_ArrowTrap,
 	eType_Manual,
+	eType_Arrow_Bullet,
 };
 
 //èdóÕâ¡ë¨ìx

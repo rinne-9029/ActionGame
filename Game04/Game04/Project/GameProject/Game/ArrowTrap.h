@@ -1,13 +1,12 @@
 #pragma once
 #include"../Base/Base.h"
 
-class Trap : public Base {
-private:
+class ArrowTrap : public Base {
 	CImage m_img;
-	int count;
-	int x;
+	bool m_flip;
+	int cnt;
 public:
-	Trap(const CVector2D& pos );
+	ArrowTrap(const CVector2D& pos,bool flip);
 	void Update();
 	void Draw();
 	void Collision(Base* b);
