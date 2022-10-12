@@ -14,7 +14,8 @@ enum {
 	eType_ArrowTrap,
 	eType_Manual,
 	eType_Arrow_Bullet,
-};
+	eType_GameClear,
+	eType_GameOver,};
 
 //èdóÕâ¡ë¨ìx
 #define GRAVITY (9.8f/20)

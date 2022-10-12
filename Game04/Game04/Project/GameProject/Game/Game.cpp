@@ -7,6 +7,8 @@
 #include "ArrowTrap.h"
 #include "Goal.h"
 #include "../Title/Title.h"
+#include "../Title/Gameclear.h"
+#include "../Title/GameOver.h"
 
 Game::Game():Base(eType_Scene) {
 	//プレイヤーの生成
@@ -22,19 +24,22 @@ Game::Game():Base(eType_Scene) {
 }
 
 Game::~Game() {
-	//全てのオブジェクトを破棄
-	Base::KillAll();
-	//タイトルシーンへ
-	Base::Add(new Title());
+
 }
 
 void Game::Update(){
 	//ゴールがなければゲームシーン終了
 	if (!Base::FindObject(eType_Goal)) {
-		SetKill();
+		//全てのオブジェクトを破棄
+		Base::KillAll();
+		//ゲームシーン
+		Base::Add(new GameClear());
 	}
 	//プレイヤー死亡　　ボタン１でゲームシーン終了
-	if (!Base::FindObject(eType_Player) &&  PUSH(CInput::eButton1)) {
-		SetKill();
+	if (!Base::FindObject(eType_Player) ) {
+		//全てのオブジェクトを破棄
+		Base::KillAll();
+		//ゲームシーン
+		Base::Add(new GameOver());
 	}
 }

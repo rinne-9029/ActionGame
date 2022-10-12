@@ -65,18 +65,17 @@ void Player::Draw()
 void Player::Collision(Base* b)
 {
 	switch (b->m_type) {
-	case eType_Field:
-		if (Map* m = dynamic_cast<Map*>(b)) {
-			int t = m->CollisionMap(CVector2D(m_pos.x,m_pos_old.y),m_rect);
-			if (t != 2)
-				m_pos.x = m_pos_old.x;
-			t = m->CollisionMap(CVector2D(m_pos_old.x, m_pos.y),m_rect);
-			if (t != 2)
-				m_pos.y = m_pos_old.y;
-		}
-		break;
-		//ƒS[ƒ‹”»’è
-	case eType_Goal:
+		case eType_Field:
+			if (Map* m = dynamic_cast<Map*>(b)) {
+				int t = m->CollisionMap(CVector2D(m_pos.x,m_pos_old.y),m_rect);
+				if (t != 1)
+					m_pos.x = m_pos_old.x;
+				t = m->CollisionMap(CVector2D(m_pos_old.x, m_pos.y),m_rect);
+				if (t != 1)
+					m_pos.y = m_pos_old.y;
+			}
+			break;
+			//ƒS[ƒ‹”»’è	case eType_Goal:
 		if (Base::CollisionRect(this, b)) {
 			b->SetKill();
 		}

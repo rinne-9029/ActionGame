@@ -38,25 +38,26 @@ void Bullet::Collision(Base* b)
 	case eType_Field:
 		if (Map* m = dynamic_cast<Map*>(b)) {
 			int t = m->CollisionMap(m_pos);
-			if (t != 2) {
-				m_pos = m_pos_old;
+			if (t != 1) {
+				if (t == 3)
+					m->SetTip(m_pos, 1);
 				SetKill();
 			}
 		}
 		break;
-	case eType_Player:
-		if (m_type == eType_Enemy_Bullet && Base::CollisionCircle(this, b)) {
-			SetKill();
-			b->SetKill();
+		case eType_Player:
+			if (m_type == eType_Enemy_Bullet && Base::CollisionCircle(this, b)) {
+				SetKill();
+				b->SetKill();
 
+			}
+			break;
+		case eType_Enemy:
+			if (Base::CollisionCircle(this, b)) {
+				SetKill();
+				b->SetKill();
+				Base::Add(new Effect(b->m_pos));
+			}
+			break;
 		}
-		break;
-	case eType_Enemy:
-		if (Base::CollisionCircle(this, b)) {
-			SetKill();
-			b->SetKill();
-			Base::Add(new Effect(b->m_pos));
-		}
-		break;
 	}
-}
