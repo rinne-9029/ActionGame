@@ -50,6 +50,7 @@ void Player::Update()
 		
 		
 	}
+
 	
 }
 
@@ -74,14 +75,25 @@ void Player::Collision(Base* b)
 					m_pos.y = m_pos_old.y;
 			}
 			break;
-			//ゴール判定
-	case eType_Goal:
+			//ゴール判定	case eType_Goal:
 		if (Base::CollisionRect(this, b)) {
 			b->SetKill();
 		}
 		break;
+	case eType_Enemy:
+		if (Base::CollisionRect(this, b)) {
+			SetKill();
+		}
+		break;
+	case eType_Trap:
+		if (Base::CollisionRect(this, b)) {
+			SetKill();
+		}
+		break;
 	}
+ 
 }
+
 		//トラップに当たった処理
 	/*case  eType_Trap:
 		if (Trap* s = dynamic_cast<Trap*>(b)) {
