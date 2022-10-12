@@ -72,6 +72,7 @@ void Init(void)
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/same.png"));
 	ADD_RESOURCE("Bullet", CImage::CreateImage("Image/Bullet.png"));
 	ADD_RESOURCE("Bullet2", CImage::CreateImage("Image/Bullet2.png"));
+	ADD_RESOURCE("Arrow", CImage::CreateImage("Image/Arrow.png"));
 	ADD_RESOURCE("MapTip", CImage::CreateImage("Image/MapTip.png"));
 	ADD_RESOURCE("MapTip2", CImage::CreateImage("Image/MapTip2.png"));
 	//ADD_RESOURCE("Trap", CImage::CreateImage("Image/Trap.png",64, 64));
