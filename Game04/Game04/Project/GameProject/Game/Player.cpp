@@ -9,10 +9,13 @@ Player::Player(const CVector2D& pos, bool flip)
 	m_pos = pos;
 	m_pos_old = pos;
 	//’†S‚ğİ’è
-	m_img.SetCenter(32.5,28);
+<<<<<<< HEA
+=======
+	m_img.SetCenter(14,32.5);
+>>>>>>> ae74af784e7820604dcbd130a13020e100c6255d
 	//‹éŒ`‚ğİ’è
-	m_rect = CRect(-32.5, -14, 32.5, 14);
-	m_img.SetSize(65,28);
+	m_rect = CRect(-14, -32.5,14, 32.5);
+	m_img.SetSize(28,65);
 	//”¼Œa
 	m_rad = 16;
 	m_count = 0;
@@ -75,7 +78,7 @@ void Player::Collision(Base* b)
 					m_pos.y = m_pos_old.y;
 			}
 			break;
-			//ƒS[ƒ‹”»’è	case eType_Goal:
+			//ƒS[ƒ‹”» ’è	case eType_Goal:
 		if (Base::CollisionRect(this, b)) {
 			b->SetKill();
 		}
