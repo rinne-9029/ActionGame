@@ -9,10 +9,10 @@ Player::Player(const CVector2D& pos, bool flip)
 	m_pos = pos;
 	m_pos_old = pos;
 	//íÜêSÇê›íË
-	m_img.SetCenter(14,32.5);
+	m_img.SetCenter(32.5,14);
 	//ãÈå`Çê›íË
-	m_rect = CRect(-14, -32.5,14, 32.5);
-	m_img.SetSize(28,65);
+	m_rect = CRect(-32.5,-14,32.5, 14);
+	m_img.SetSize(65,28);
 	//îºåa
 	m_rad = 16;
 	m_count = 0;
@@ -57,7 +57,7 @@ void Player::Update()
 void Player::Draw()
 {
 	m_img.SetPos(m_pos);
-	m_img.SetAng(m_ang);
+	//m_img.SetAng(m_ang);
 	m_img.Draw();
 	DrawRect();
 }
@@ -70,9 +70,9 @@ void Player::Collision(Base* b)
 				int t = m->CollisionMap(CVector2D(m_pos.x,m_pos_old.y),m_rect);
 				if (t != 1)
 					m_pos.x = m_pos_old.x;
-				t = m->CollisionMap(CVector2D(m_pos_old.x, m_pos.y),m_rect);
+			/*	t = m->CollisionMap(CVector2D(m_pos_old.x, m_pos.y), m_rect);
 				if (t != 1)
-					m_pos.y = m_pos_old.y;
+					m_pos.y = m_pos_old.y;*/
 			}
 			break;
 			//ÉSÅ[Éãîª íË	case eType_Goal:
