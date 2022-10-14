@@ -150,7 +150,9 @@ Map::Map(int stage):Base(eType_Field)
 		Base::Add(new Goal(CVector2D(36 * MAP_TIP_SIZE, 19 * MAP_TIP_SIZE)));
 		break;
 	case 3:
+
 		memcpy(m_map_data, stage3data, sizeof(stage3data));
+		Base::Add(new Player(CVector2D(32 * 3, 32 * 4), true));
 		//ìGÇÃê∂ê¨
 		Base::Add(new Enemy(CVector2D(32 * 3, 32 * 8)));
 		Base::Add(new Enemy(CVector2D(32 * 17, 32 * 14)));
