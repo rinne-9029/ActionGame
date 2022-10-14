@@ -13,7 +13,7 @@ enum {
 	eType_Trap,
 	eType_ArrowTrap,
 	eType_Manual,
-	eType_Arrow_Bullet,
+	eType_Arrow,
 	eType_GameClear,
 	eType_GameOver,};
 
