@@ -23,6 +23,8 @@ Effect::Effect(const CVector2D& pos)
 
 void Effect::Update()
 {
+
+
 	m_img.UpdateAnimation();
 	if (m_img.CheckAnimationEnd())
 		m_kill = true;
