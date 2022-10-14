@@ -7,8 +7,8 @@ Arrow::Arrow(int type, const CVector2D& pos, float ang, float speed)
     m_img = COPY_RESOURCE("Arrow", CImage);
 
 	m_pos = pos;
-	m_img.SetCenter(1.5, 14.5);
-	m_img.SetRect(-1.5, -14.5, 1.5, 14.5);
+	m_img.SetCenter(1.5, 0);
+	//m_img.SetRect(-1.5, -14.5, 1.5, 14.5);
 	m_ang = ang;
 	m_speed = speed;
 }
@@ -31,10 +31,10 @@ void Arrow::Draw()
 void Arrow::Collision(Base* b)
 {
 	switch (b->m_type) {
-		/*case eType_Field:
+		case eType_Field:
 			if (Map* m = dynamic_cast<Map*>(b)) {
 				int t = m->CollisionMap(m_pos);
-				if (t != 2) {
+				if (t != 1) {
 					m_pos = m_pos_old;
 					SetKill();
 				}
@@ -46,18 +46,18 @@ void Arrow::Collision(Base* b)
 				b->SetKill();
 
 			}
-			break;*/
+			break;
 	case eType_Enemy:
 		if (Base::CollisionCircle(this, b)) {
 			SetKill();
 			b->SetKill();
 		}
 		break;
-	case eType_Player:
+	/*case eType_Player:
 		if (Base::CollisionCircle(this, b)) {
 			SetKill();
 			b->SetKill();
 		}
-		break;
+		break;*/
 	}
 }

@@ -9,10 +9,7 @@ Player::Player(const CVector2D& pos, bool flip)
 	m_pos = pos;
 	m_pos_old = pos;
 	//中心を設定
-<<<<<<< HEA
-=======
 	m_img.SetCenter(14,32.5);
->>>>>>> ae74af784e7820604dcbd130a13020e100c6255d
 	//矩形を設定
 	m_rect = CRect(-14, -32.5,14, 32.5);
 	m_img.SetSize(28,65);
@@ -60,7 +57,7 @@ void Player::Update()
 void Player::Draw()
 {
 	m_img.SetPos(m_pos);
-	m_img.SetAng(m_ang);
+	//m_img.SetAng(m_ang);
 	m_img.Draw();
 	DrawRect();
 }
@@ -78,7 +75,8 @@ void Player::Collision(Base* b)
 					m_pos.y = m_pos_old.y;
 			}
 			break;
-			//ゴール判 定	case eType_Goal:
+			//ゴール判 定	
+		case eType_Goal:
 		if (Base::CollisionRect(this, b)) {
 			b->SetKill();
 		}

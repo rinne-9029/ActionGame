@@ -33,11 +33,11 @@ ArrowTrap::ArrowTrap(const CVector2D& pos,bool flip) :
 	m_pos = pos;
 	m_pos_old = pos;
 	//中心を設定
-	m_img.SetCenter(16, 16);
+	m_img.SetCenter(48, 0);
     //再生アニメーション設定
 	m_img.ChangeAnimation(0,true);
 	//当たり判定用矩形設定
-	//m_rect = CRect(-15, -15, 20, 20);
+	m_rect = CRect(-24, 0, 24, 32);
 	//反転フラグ
 	m_flip = flip;
 }
@@ -93,7 +93,7 @@ void ArrowTrap::Draw()
 	//反転設定
 	m_img.SetFlipH(m_flip);
 
-	//DrawRect();
+	DrawRect();
 }
 
 void ArrowTrap::Collision(Base* b)

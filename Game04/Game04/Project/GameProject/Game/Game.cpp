@@ -16,8 +16,8 @@ Game::Game():Base(eType_Scene) {
 	
 
 	//トラップの生成
-	Base::Add(new Trap(CVector2D(32*5, 32*4)));
-	Base::Add(new ArrowTrap(CVector2D(12 * MAP_TIP_SIZE, 18.5 * MAP_TIP_SIZE),true));
+	Base::Add(new Trap(CVector2D(25 * MAP_TIP_SIZE, 13* MAP_TIP_SIZE)));
+	Base::Add(new ArrowTrap(CVector2D(13 * MAP_TIP_SIZE, 18 * MAP_TIP_SIZE),true));
 	//マップの生成
 	Base::Add(new Map(1));
 
