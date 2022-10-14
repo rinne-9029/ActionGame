@@ -93,7 +93,7 @@ void ArrowTrap::Draw()
 	//îΩì]ê›íË
 	m_img.SetFlipH(m_flip);
 
-	DrawRect();
+	//DrawRect();
 }
 
 void ArrowTrap::Collision(Base* b)

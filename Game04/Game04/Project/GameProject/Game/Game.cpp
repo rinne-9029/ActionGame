@@ -11,13 +11,16 @@
 #include "../Title/Gameclear.h"
 #include "../Title/GameOver.h"
 
-Game::Game() :Base(eType_Scene) {
+	
+
+	Game::Game():Base(eType_Scene)
+	{
+	//Base::Add(new ArrowTrap(CVector2D(13 * MAP_TIP_SIZE, 18 * MAP_TIP_SIZE),true));
 	//É}ÉbÉvÇÃê∂ê¨
-	Base::Add(new Map(GameData::stage));
+	  Base::Add(new Map(GameData::stage));
+	}
 
-}
-
-Game::~Game() {
+	Game::~Game() {
 
 }
 

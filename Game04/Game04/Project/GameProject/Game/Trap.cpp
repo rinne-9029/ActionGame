@@ -46,7 +46,7 @@ void Trap::Update()
 	//アニメーション更新
 	m_img.UpdateAnimation();
 	//矩形判定設定
-	m_rect = CRect(-18, 21*(x-1), 18, 21*x);
+	m_rect = CRect(-16, 21*(x-1), 16, 21*x);
 	count++;
 	switch (count) {
 	case 2:
