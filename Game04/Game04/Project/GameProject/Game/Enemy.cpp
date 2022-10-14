@@ -29,7 +29,7 @@ void Enemy::StateIdle()
 			move_flag = true;
 		}
 		//‰ºˆÚ“®
-		if (player->m_pos.y < m_pos.y && player->m_pos.y>m_pos.y-200 && player->m_pos.x > m_pos.x - 200 && player->m_pos.x < m_pos.x + 200) {
+		if (player->m_pos.y < m_pos.y && player->m_pos.y>m_pos.y - 200 && player->m_pos.x > m_pos.x - 200 && player->m_pos.x < m_pos.x + 200) {
 			//ˆÚ“®—Ê‚ðÝ’è
 			m_pos.y += -move_speed;
 			//”½“]ƒtƒ‰ƒO
