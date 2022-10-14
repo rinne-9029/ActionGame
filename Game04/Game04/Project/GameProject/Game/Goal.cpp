@@ -9,8 +9,14 @@ Goal::Goal(const CVector2D& pos):Base(eType_Goal){
 	m_img.SetSize(65, 28);
 }
 
+void Goal::Update() {
+
+}
+
 void Goal::Draw(){
 	m_img.SetPos(m_pos);
 	m_img.Draw();
 	DrawRect();
 }
+
+

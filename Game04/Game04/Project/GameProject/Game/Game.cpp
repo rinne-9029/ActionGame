@@ -19,7 +19,7 @@ Game::Game():Base(eType_Scene) {
 	Base::Add(new Trap(CVector2D(25 * MAP_TIP_SIZE, 13* MAP_TIP_SIZE)));
 	Base::Add(new ArrowTrap(CVector2D(13 * MAP_TIP_SIZE, 18 * MAP_TIP_SIZE),true));
 	//É}ÉbÉvÇÃê∂ê¨
-	Base::Add(new Map(1));
+	Base::Add(new Map(3));
 
 }
 
