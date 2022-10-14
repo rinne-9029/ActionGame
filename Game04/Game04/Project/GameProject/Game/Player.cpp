@@ -92,6 +92,11 @@ void Player::Collision(Base* b)
 			SetKill();
 		}
 		break;
+	case eType_Arrow:
+		if (Base::CollisionRect(this, b)) {
+			SetKill();
+		}
+		break;
 	}
  
 }
