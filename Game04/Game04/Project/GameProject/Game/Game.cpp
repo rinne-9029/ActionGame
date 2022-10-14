@@ -11,12 +11,16 @@
 #include "../Title/Gameclear.h"
 #include "../Title/GameOver.h"
 
-	Base::Add(new ArrowTrap(CVector2D(13 * MAP_TIP_SIZE, 18 * MAP_TIP_SIZE),true));
-	//マップの生成
 	
-	Base::Add(new Map(GameData::stage));}
 
-Game::~Game() {
+	Game::Game():Base(eType_Scene)
+	{
+	//Base::Add(new ArrowTrap(CVector2D(13 * MAP_TIP_SIZE, 18 * MAP_TIP_SIZE),true));
+	//マップの生成
+	  Base::Add(new Map(GameData::stage));
+	}
+
+	Game::~Game() {
 
 }
 

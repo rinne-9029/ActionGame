@@ -4,7 +4,8 @@
 #include "Player.h"
 #include "Trap.h"
 #include "ArrowTrap.h"
-#include "GameData.h"static int stage1data[MAP_HEIGHT][MAP_WIDTH] = {
+#include "GameData.h"
+static int stage1data[MAP_HEIGHT][MAP_WIDTH] = {
 	{ 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
 	{ 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,1,1,1,2},
 	{ 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2},
