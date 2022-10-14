@@ -71,9 +71,9 @@ void Player::Collision(Base* b)
 				int t = m->CollisionMap(CVector2D(m_pos.x,m_pos_old.y),m_rect);
 				if (t != 1)
 					m_pos.x = m_pos_old.x;
-			/*	t = m->CollisionMap(CVector2D(m_pos_old.x, m_pos.y), m_rect);
+				t = m->CollisionMap(CVector2D(m_pos_old.x, m_pos.y), m_rect);
 				if (t != 1)
-					m_pos.y = m_pos_old.y;*/
+					m_pos.y = m_pos_old.y;
 			}
 			break;
 			//ÉSÅ[Éãîª íË	
@@ -88,6 +88,11 @@ void Player::Collision(Base* b)
 		}
 		break;
 	case eType_Trap:
+		if (Base::CollisionRect(this, b)) {
+			SetKill();
+		}
+		break;
+	case eType_Arrow:
 		if (Base::CollisionRect(this, b)) {
 			SetKill();
 		}

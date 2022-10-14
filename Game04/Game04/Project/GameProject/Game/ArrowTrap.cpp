@@ -33,11 +33,11 @@ ArrowTrap::ArrowTrap(const CVector2D& pos,bool flip) :
 	m_pos = pos;
 	m_pos_old = pos;
 	//中心を設定
-	m_img.SetCenter(48, 0);
+	m_img.SetCenter(64, 0);
     //再生アニメーション設定
 	m_img.ChangeAnimation(0,true);
 	//当たり判定用矩形設定
-	m_rect = CRect(-24, 0, 24, 32);
+	m_rect = CRect(-30, 12, 5, 30);
 	//反転フラグ
 	m_flip = flip;
 }
@@ -57,7 +57,7 @@ void ArrowTrap::Update()
 			m_ang = atan2(vec.x, vec.y);
 			switch (cnt) {
 			case 89:
-				Base::Add(new Arrow(eType_Arrow_Bullet, m_pos, m_ang, 4));
+				Base::Add(new Arrow(eType_Arrow, m_pos, m_ang, 4));
 				break;
 			case 177:
 				cnt = 0;
@@ -73,7 +73,7 @@ void ArrowTrap::Update()
 			m_ang = atan2(vec.x, vec.y);
 			switch (cnt) {
 			case 89:
-				Base::Add(new Arrow(eType_Arrow_Bullet, m_pos, m_ang, 4));
+				Base::Add(new Arrow(eType_Arrow, m_pos, m_ang, 4));
 				break;
 			case 177:
 				cnt = 0;
