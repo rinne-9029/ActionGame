@@ -2,6 +2,7 @@
 #include"Bullet.h"
 #include"Map.h"
 
+
 void Enemy::StateIdle()
 {//移動量
 	const float move_speed = 2;
@@ -71,6 +72,7 @@ Enemy::Enemy(const CVector2D& pos)
 
 void Enemy::Update()
 {
+
 	m_pos_old = m_pos;
 	/*//カウントアップ
 	m_cnt++;

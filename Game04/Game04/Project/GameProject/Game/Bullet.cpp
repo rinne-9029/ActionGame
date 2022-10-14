@@ -20,6 +20,7 @@ Bullet::Bullet(int type,const CVector2D& pos,float ang,float speed)
 
 void Bullet::Update()
 {
+
 	m_pos_old = m_pos;
 	m_vec = CVector2D(sin(m_ang), cos(m_ang)) * m_speed;
 	m_pos += m_vec;
