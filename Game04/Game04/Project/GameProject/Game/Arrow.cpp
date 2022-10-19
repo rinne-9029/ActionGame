@@ -9,7 +9,7 @@ Arrow::Arrow(int type, const CVector2D& pos, float ang, float speed)
 	m_pos = pos;
 
 
-	m_img.SetCenter(-20, -5);
+	m_img.SetCenter(1.5,29);
 	m_img.SetRect(-1.5, -14.5, 1.5, 14.5);
 	m_ang = ang;
 	m_speed = speed;

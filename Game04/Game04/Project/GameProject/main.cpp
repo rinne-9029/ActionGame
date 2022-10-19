@@ -10,6 +10,7 @@
 #include"Game/AnimData.h"
 #include"Game/Trap.h"
 #include"Title/Title.h"
+#include"Game/UI.h"
 #include"Game/Manual.h"
 //--------------------------------------------
 //ƒOƒ[ƒoƒ‹•Ï”—Ìˆæ

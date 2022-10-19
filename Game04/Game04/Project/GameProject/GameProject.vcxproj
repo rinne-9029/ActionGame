@@ -24,6 +24,7 @@
     <ClCompile Include="Game\Map.cpp" />
     <ClCompile Include="Game\Player.cpp" />
     <ClCompile Include="Game\Trap.cpp" />
+    <ClCompile Include="Game\UI.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Title\GameClear.cpp" />
     <ClCompile Include="Title\GameOver.cpp" />
@@ -43,6 +44,7 @@
     <ClInclude Include="Game\Map.h" />
     <ClInclude Include="Game\Player.h" />
     <ClInclude Include="Game\Trap.h" />
+    <ClInclude Include="Game\UI.h" />
     <ClInclude Include="Title\GameClear.h" />
     <ClInclude Include="Title\GameOver.h" />
     <ClInclude Include="Title\Title.h" />

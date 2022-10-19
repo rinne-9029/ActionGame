@@ -7,6 +7,7 @@
 #include "ArrowTrap.h"
 #include "Goal.h"
 #include "GameData.h"
+#include"UI.h"
 #include "../Title/Title.h"
 #include "../Title/Gameclear.h"
 #include "../Title/GameOver.h"
@@ -18,6 +19,7 @@
 	//Base::Add(new ArrowTrap(CVector2D(13 * MAP_TIP_SIZE, 18 * MAP_TIP_SIZE),true));
 	//マップの生成
 	  Base::Add(new Map(GameData::stage));
+	  Base::Add(new UI());
 	}
 
 	Game::~Game() {
@@ -31,12 +33,14 @@ void Game::Update(){
 		Base::KillAll();
 		//ゲームシーン
 		Base::Add(new GameClear());
+		GameData::s_count = 60;
 	}
 	//プレイヤー死亡　　ボタン１でゲームシーン終了
-	if (!Base::FindObject(eType_Player) ) {
+	if (!Base::FindObject(eType_Player) || GameData::s_count<=0 ) {
 		//全てのオブジェクトを破棄
 		Base::KillAll();
 		//ゲームシーン
 		Base::Add(new GameOver());
+		GameData::s_count = 60;
 	}
 }
