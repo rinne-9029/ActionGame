@@ -9,8 +9,8 @@ Arrow::Arrow(int type, const CVector2D& pos, float ang, float speed)
 	m_pos = pos;
 
 
-	m_img.SetCenter(-20, -5);
-	m_img.SetRect(-1.5, -14.5, 1.5, 14.5);
+	m_img.SetCenter(1.5, 29);
+	m_img.SetRect(-1.5, -29, 1.5, 0);
 	m_ang = ang;
 	m_speed = speed;
 }
@@ -27,7 +27,7 @@ void Arrow::Draw()
 	m_img.SetPos(m_pos);
 	m_img.SetAng(m_ang);
 	m_img.Draw();
-	//DrawRect();
+	DrawRect();
 }
 
 void Arrow::Collision(Base* b)

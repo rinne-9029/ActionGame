@@ -125,3 +125,5 @@ void Enemy::Collision(Base* b)
 	}
 
 }
+
+
