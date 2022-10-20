@@ -11,8 +11,7 @@ Arrow::Arrow(int type, const CVector2D& pos, float ang, float speed)
 
 	m_img.SetCenter(16,16);
 	m_rect = CRect(-16, -16, 16, 16);
-	m_ang = ang;
-	m_speed = speed;
+	m_ang = ang;	m_speed = speed;
 }
 
 void Arrow::Update()
