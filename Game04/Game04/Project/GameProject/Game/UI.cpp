@@ -26,5 +26,28 @@ void UI::Draw()
 		m_img.SetPos(100 - 32 * i, 0);
 		m_img.Draw();
 	}
+	int kosuu = GameData::kosuu;
 
+		int s = kosuu % 10;
+		m_img.SetRect(16 * s, 16, 16 * s + 16, 32);
+		m_img.SetSize(32, 32);
+		m_img.SetPos(280, 0);
+		m_img.Draw();
+	
+}
+
+UI2::UI2():Base(eType_UI2)
+{
+	m_img.Load("Image/UI2.png");
+}
+
+void UI2::Update()
+{
+}
+
+void UI2::Draw()
+{
+	m_img.SetPos(200,5);
+	m_img.SetSize(80, 20);
+	m_img.Draw();
 }
