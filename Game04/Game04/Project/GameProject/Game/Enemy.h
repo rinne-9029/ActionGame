@@ -10,15 +10,16 @@ private:
 	};
 	//ó‘Ô•Ï”
 	int m_state;
-
+	int Enemy_Type;
 	CImage m_img;
 	int m_cnt;
 	int m_flip;
 	//Šeó‘Ô‚Å‚Ì‹““®
-	void StateIdle();
+	void StateIdleA();
+	void StateIdleB();
 	void StateAttack();
 public:
-	Enemy(const CVector2D& pos);
+	Enemy(const CVector2D& pos,int enemy_type);
 	void Update();
 	void Draw();
 	void Collision(Base* b);
