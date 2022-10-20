@@ -161,8 +161,10 @@ Map::Map(int stage):Base(eType_Field)
 		Base::Add(new Enemy(CVector2D(32 * 37, 32 * 15)));
 		//ゴールの生成
 		Base::Add(new Goal(CVector2D(1100, 50)));
-		//弓矢トラップ
+	//弓矢トラップ
 		Base::Add(new ArrowTrap(CVector2D(13 * MAP_TIP_SIZE, 18 * MAP_TIP_SIZE), true));
+		Base::Add(new ArrowTrap(CVector2D(14 * MAP_TIP_SIZE, 18 * MAP_TIP_SIZE), true));
+		Base::Add(new ArrowTrap(CVector2D(2 * MAP_TIP_SIZE, 3 * MAP_TIP_SIZE), true));
 		break;
 	}
 }

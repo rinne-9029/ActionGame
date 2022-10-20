@@ -47,6 +47,7 @@ void Player::Update()
 	if (m_count<5&&PUSH(CInput::eMouseL)) {
 		Base::Add(new Bullet(eType_Player_Bullet, m_pos, m_ang, 4));
 		m_count++;
+		GameData::kosuu -= 1;
 		
 		
 	}

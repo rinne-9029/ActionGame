@@ -20,6 +20,7 @@
 	//マップの生成
 	  Base::Add(new Map(GameData::stage));
 	  Base::Add(new UI());
+	  Base::Add(new UI2());
 	}
 
 	Game::~Game() {
@@ -34,6 +35,7 @@ void Game::Update(){
 		//ゲームシーン
 		Base::Add(new GameClear());
 		GameData::s_count = 60;
+		GameData::kosuu = 5;
 	}
 	//プレイヤー死亡　　ボタン１でゲームシーン終了
 	if (!Base::FindObject(eType_Player) || GameData::s_count<=0 ) {
@@ -42,5 +44,6 @@ void Game::Update(){
 		//ゲームシーン
 		Base::Add(new GameOver());
 		GameData::s_count = 60;
+		GameData::kosuu = 5;
 	}
 }

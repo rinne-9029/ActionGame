@@ -6,14 +6,16 @@ Bullet::Bullet(int type,const CVector2D& pos,float ang,float speed)
 	:Base(type)
 {
 	if (type == eType_Player_Bullet) {
-		m_img = COPY_RESOURCE("Bullet", CImage);
+		m_img = COPY_RESOURCE("Bullet3", CImage);
 	}
 	else {
 		m_img = COPY_RESOURCE("Bullet2", CImage);
 	}
 
 	m_pos = pos;
-	m_img.SetCenter(16, 16);
+	m_img.SetCenter(10, 70);
+	m_rect = CRect(-10, -10, 10, 10);
+	m_img.SetSize(20, 80);
 	m_ang = ang;
 	m_speed = speed;
 }
@@ -31,6 +33,7 @@ void Bullet::Draw()
 	m_img.SetPos(m_pos);
 	m_img.SetAng(m_ang);
 	m_img.Draw();
+	DrawRect();
 }
 
 void Bullet::Collision(Base* b)

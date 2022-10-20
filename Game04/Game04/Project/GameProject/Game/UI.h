@@ -11,3 +11,13 @@ public:
     void Draw();
 };
 
+class UI2 :public Base {
+public:
+	CImage m_img;
+	int cnt;
+public:
+	UI2();
+	void Update();
+	void Draw();
+};
+
