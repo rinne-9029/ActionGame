@@ -4,13 +4,13 @@
 Arrow::Arrow(int type, const CVector2D& pos, float ang, float speed)
 	:Base(eType_Arrow)
 {
-    m_img = COPY_RESOURCE("Arrow", CImage);
+    m_img = COPY_RESOURCE("Bullet", CImage);
 
 	m_pos = pos;
 
 
-	m_img.SetCenter(1.5,29);
-	m_img.SetRect(-1.5, -14.5, 1.5, 14.5);
+	m_img.SetCenter(16,16);
+	m_rect = CRect(-16, -16, 16, 16);
 	m_ang = ang;
 	m_speed = speed;
 }
@@ -27,7 +27,7 @@ void Arrow::Draw()
 	m_img.SetPos(m_pos);
 	m_img.SetAng(m_ang);
 	m_img.Draw();
-	//DrawRect();
+	DrawRect();
 }
 
 void Arrow::Collision(Base* b)
