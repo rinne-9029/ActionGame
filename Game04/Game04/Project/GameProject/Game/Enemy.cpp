@@ -58,7 +58,7 @@ void Enemy::StateIdleB()
 
 	if (player) {
 		//左移動
-		if (player->m_pos.x < m_pos.x +32 && player->m_pos.y > m_pos.y -10 && player->m_pos.y < m_pos.y + 10) {
+		if (player->m_pos.x < m_pos.x +32 && player->m_pos.y > m_pos.y -40 && player->m_pos.y < m_pos.y + 40) {
 			//移動量を設定
 			m_pos.x += -move_speed;
 			//反転フラグ
@@ -66,7 +66,7 @@ void Enemy::StateIdleB()
 			move_flag = true;
 		}
 		//右移動
-		if (player->m_pos.x > m_pos.x +32 && player->m_pos.y > m_pos.y -10 && player->m_pos.y < m_pos.y + 10 ) {
+		if (player->m_pos.x > m_pos.x +32 && player->m_pos.y > m_pos.y -40 && player->m_pos.y < m_pos.y +40 ) {
 			//移動量を設定
 			m_pos.x += move_speed;
 			//反転フラグ
@@ -159,7 +159,7 @@ Enemy::Enemy(const CVector2D& pos,int enemy_type)
 	//中心を設定
 	m_img.SetCenter(32, 32);
 	//矩形当たり判定
-	m_rect = CRect(-28, -28, 28, 28);
+	m_rect = CRect(-24, -24, 24, 24);
 	//半径
 	m_rad = 32;
 	//通常状態へ

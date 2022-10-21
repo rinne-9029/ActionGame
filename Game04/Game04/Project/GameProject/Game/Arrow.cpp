@@ -26,7 +26,7 @@ void Arrow::Draw()
 	m_img.SetPos(m_pos);
 	m_img.SetAng(m_ang);
 	m_img.Draw();
-	DrawRect();
+	//DrawRect();
 }
 
 void Arrow::Collision(Base* b)

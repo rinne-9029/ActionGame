@@ -11,10 +11,11 @@ Player::Player(const CVector2D& pos, bool flip)
 	//’†S‚ğİ’è
 	m_img.SetCenter(32.5,14);
 	//‹éŒ`‚ğİ’è
+	m_flip = flip;
 	m_rect = CRect(-32.5,-14,32.5, 14);
 	m_img.SetSize(65,28);
 	//”¼Œa
-	m_rad = 16;
+	//m_rad = 16;
 	m_count = 0;
 
 }
@@ -26,10 +27,12 @@ void Player::Update()
 	//¶‚ÉˆÚ“®
 	if (HOLD(CInput::eLeft)) {
 		m_pos.x -= speed;
+		m_flip = true;
 	}
 	//‰E‚ÉˆÚ“®
 	if (HOLD(CInput::eRight)) {
 		m_pos.x += speed;
+		m_flip = false;
 	}
 	//ã‚ÉˆÚ“®
 	if (HOLD(CInput::eUp)) {
@@ -59,9 +62,10 @@ void Player::Update()
 void Player::Draw()
 {
 	m_img.SetPos(m_pos);
+	m_img.SetFlipH(m_flip);
 	//m_img.SetAng(m_ang);
 	m_img.Draw();
-	DrawRect();
+	//DrawRect();
 }
 
 void Player::Collision(Base* b)
