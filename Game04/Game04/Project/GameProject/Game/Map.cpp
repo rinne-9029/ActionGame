@@ -130,6 +130,7 @@ Map::Map(int stage):Base(eType_Field)
 		Base::Add(new Enemy(CVector2D(3 * MAP_TIP_SIZE, 20 * MAP_TIP_SIZE),0));
 	    Base::Add(new Enemy(CVector2D(12 * MAP_TIP_SIZE, 20 * MAP_TIP_SIZE),0));
 		Base::Add(new Enemy(CVector2D(13 * MAP_TIP_SIZE, 14 * MAP_TIP_SIZE),0));
+		Base::Add(new Enemy(CVector2D(4 * MAP_TIP_SIZE, 11 * MAP_TIP_SIZE), 1));
 		//ÉgÉâÉbÉvÇÃê∂ê¨
 		Base::Add(new Trap(CVector2D(5 * MAP_TIP_SIZE, 1 * MAP_TIP_SIZE)));
 		Base::Add(new Trap(CVector2D(6 * MAP_TIP_SIZE, 1 * MAP_TIP_SIZE)));

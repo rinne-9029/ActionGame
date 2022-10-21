@@ -17,7 +17,7 @@ Bullet::Bullet(int type,const CVector2D& pos,float ang,float speed)
 	m_rect = CRect(-10, -10, 10, 10);
 	m_img.SetSize(20, 80);
 	m_ang = ang;
-	m_speed = speed;
+	//m_speed = speed;
 }
 
 void Bullet::Update()
@@ -33,7 +33,7 @@ void Bullet::Draw()
 	m_img.SetPos(m_pos);
 	m_img.SetAng(m_ang);
 	m_img.Draw();
-	DrawRect();
+	//DrawRect();
 }
 
 void Bullet::Collision(Base* b)

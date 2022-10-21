@@ -16,7 +16,7 @@ void Goal::Update() {
 void Goal::Draw(){
 	m_img.SetPos(m_pos);
 	m_img.Draw();
-	DrawRect();
+	//DrawRect();
 }
 
 
