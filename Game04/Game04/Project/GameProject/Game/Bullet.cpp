@@ -53,6 +53,7 @@ void Bullet::Collision(Base* b)
 			if (m_type == eType_Enemy_Bullet && Base::CollisionCircle(this, b)) {
 				SetKill();
 				b->SetKill();
+				
 			}
 			break;
 		case eType_Enemy:

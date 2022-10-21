@@ -90,16 +90,19 @@ void Player::Collision(Base* b)
 	case eType_Enemy:
 		if (Base::CollisionRect(this, b)) {
 			SetKill();
+			SOUND("tamago")->Play();
 		}
 		break;
 	case eType_Trap:
 		if (Base::CollisionRect(this, b)) {
 			SetKill();
+			SOUND("tamago")->Play();
 		}
 		break;
 	case eType_Arrow:
 		if (Base::CollisionRect(this, b)) {
 			SetKill();
+			SOUND("tamago")->Play();
 		}
 		break;
 	}
