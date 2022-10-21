@@ -17,6 +17,7 @@ private:
 	//Šeó‘Ô‚Å‚Ì‹““®
 	void StateIdleA();
 	void StateIdleB();
+	void StateIdleC();
 	void StateAttack();
 public:
 	Enemy(const CVector2D& pos,int enemy_type);
