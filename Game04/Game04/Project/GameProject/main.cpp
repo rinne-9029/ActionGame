@@ -93,6 +93,7 @@ void Init(void)
 	SOUND("tamago")->Load("Sound/SE/tamag.wav", 10);
 	
 	
+	
 
 
 

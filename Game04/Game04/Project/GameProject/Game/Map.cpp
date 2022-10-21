@@ -158,7 +158,7 @@ Map::Map(int stage):Base(eType_Field)
 		//“G‚Ì¶¬
 		Base::Add(new Enemy(CVector2D(32 * 3, 32 * 8),0));
 		Base::Add(new Enemy(CVector2D(32 * 17, 32 * 14),0));
-		Base::Add(new Enemy(CVector2D(32 * 37, 32 * 10),1));
+		Base::Add(new Enemy(CVector2D(32 * 37, 32 * 10),2));
 		Base::Add(new Enemy(CVector2D(32 * 3, 32 * 15),0));
 		Base::Add(new Enemy(CVector2D(32 * 37, 33 * 15),1));
 		//ƒS[ƒ‹‚Ì¶¬
