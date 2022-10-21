@@ -23,5 +23,5 @@ void GameClear::Update(){
 void GameClear::Draw(){
 	m_img.Draw();
 	//•¶Žš•\Ž¦
-	m_GameClear_text.Draw(400, 200, 0, 0, 0, "Title");
+	m_GameClear_text.Draw(450, 200, 0, 50, 0, "GameClear!!");
 }

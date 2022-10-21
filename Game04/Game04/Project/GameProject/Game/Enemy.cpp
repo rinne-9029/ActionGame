@@ -92,6 +92,52 @@ void Enemy::StateIdleB()
 	}
 
 }
+
+void Enemy::StateIdleC(){
+	//移動量
+	const float move_speed = 2;
+	//移動フラグ
+	bool move_flag = false;
+	//プレイヤーを探索
+	Base* player = Base::FindObject(eType_Player);
+
+	if (player) {
+		//左移動
+		if (player->m_pos.x < m_pos.x && player->m_pos.x > m_pos.x - 200 && player->m_pos.y > m_pos.y - 200 && player->m_pos.y < m_pos.y + 200) {
+			//移動量を設定
+			m_pos.x += -move_speed;
+			//反転フラグ
+			m_flip = true;
+			move_flag = true;
+		}
+		//右移動
+		if (player->m_pos.x > m_pos.x && player->m_pos.x<m_pos.x + 200 && player->m_pos.y > m_pos.y - 200 && player->m_pos.y < m_pos.y + 200) {
+			//移動量を設定
+			m_pos.x += move_speed;
+			//反転フラグ
+			m_flip = false;
+			move_flag = true;
+		}
+		//下移動
+		if (player->m_pos.y < m_pos.y && player->m_pos.y>m_pos.y - 200 && player->m_pos.x > m_pos.x - 200 && player->m_pos.x < m_pos.x + 200) {
+			//移動量を設定
+			m_pos.y += -move_speed;
+			//反転フラグ
+			m_flip = true;
+			move_flag = true;
+		}
+		//上移動
+		if (player->m_pos.y > m_pos.y && player->m_pos.y<m_pos.y + 200 && player->m_pos.x > m_pos.x - 200 && player->m_pos.x < m_pos.x + 200) {
+			//移動量を設定
+			m_pos.y += move_speed;
+			//反転フラグ
+			m_flip = true;
+			move_flag = true;
+		}
+	}
+}
+
+
 void Enemy::StateAttack()
 {
 }
@@ -102,8 +148,10 @@ Enemy::Enemy(const CVector2D& pos,int enemy_type)
 	Enemy_Type = enemy_type;
 	if(Enemy_Type==0)
 		m_img = COPY_RESOURCE("Enemy", CImage);
-	else
+	else if (Enemy_Type == 1)
 		m_img = COPY_RESOURCE("Enemy2", CImage);
+	else
+		m_img = COPY_RESOURCE("Enemy3", CImage);
 	m_pos = pos;
 	m_pos_old = pos;
 	//大きさ
@@ -144,8 +192,10 @@ void Enemy::Update()
 	case eState_Idle:
 		if(Enemy_Type==0)
 			StateIdleA();
-		else
+		else if (Enemy_Type == 1)
 			StateIdleB();
+		else
+			StateIdleC();
 		break;
 		//攻撃状態
 	case eState_Attack:
