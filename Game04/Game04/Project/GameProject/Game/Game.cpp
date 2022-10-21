@@ -24,7 +24,7 @@
 	}
 
 	Game::~Game() {
-
+		SOUND("bgm")->Stop();
 }
 
 void Game::Update(){

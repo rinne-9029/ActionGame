@@ -6,6 +6,7 @@
 
 Title::Title() :Base(eType_Scene),m_title_text("C:\\Windows\\Fonts\\msgothic.ttc",64){
 	m_img = COPY_RESOURCE("Title", CImage);
+	SOUND("bgm")->Play();
 }
 
 Title::~Title(){
