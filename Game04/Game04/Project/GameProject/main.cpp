@@ -89,6 +89,10 @@ void Init(void)
 	
 	//ƒ^ƒCƒgƒ‹‚Ì¶¬
 	Base::Add(new Title());
+	SOUND("bgm")->Load("Sound/BGM/bgm.wav");
+	SOUND("tamago")->Load("Sound/SE/tamag.wav", 10);
+	
+	
 
 
 

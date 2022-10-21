@@ -53,13 +53,13 @@ void Bullet::Collision(Base* b)
 			if (m_type == eType_Enemy_Bullet && Base::CollisionCircle(this, b)) {
 				SetKill();
 				b->SetKill();
-
 			}
 			break;
 		case eType_Enemy:
 			if (Base::CollisionCircle(this, b)) {
 				SetKill();
 				b->SetKill();
+				SOUND("tamago")->Play();
 				Base::Add(new Effect(b->m_pos));
 			}
 			break;
