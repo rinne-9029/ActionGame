@@ -10,7 +10,7 @@ Arrow::Arrow(int type, const CVector2D& pos, float ang, float speed)
 
 
 	m_img.SetCenter(16,16);
-	m_rect = CRect(-16, -16, 16, 16);
+	m_rect = CRect(-14, -14, 14, 14);
 	m_ang = ang;	m_speed = speed;
 }
 
@@ -54,11 +54,11 @@ void Arrow::Collision(Base* b)
 			b->SetKill();
 		}
 		break;
-	case eType_Player:
-		if (Base::CollisionCircle(this, b)) {
+	/*case eType_Player:
+		*if (Base::CollisionCircle(this, b)) {
 			SetKill();
 			b->SetKill();
 		}
-		break;
+		break;*/
 	}
 }

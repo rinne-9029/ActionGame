@@ -95,14 +95,14 @@ void Enemy::StateIdleB()
 
 void Enemy::StateIdleC(){
 	//移動量
-	const float move_speed = 2;
+	const float move_speed = 10;
 	//移動フラグ
 	bool move_flag = false;
 	//プレイヤーを探索
 	Base* player = Base::FindObject(eType_Player);
 
 	if (player) {
-		//左移動
+		/*左移動
 		if (player->m_pos.x < m_pos.x && player->m_pos.x > m_pos.x - 200 && player->m_pos.y > m_pos.y - 200 && player->m_pos.y < m_pos.y + 200) {
 			//移動量を設定
 			m_pos.x += -move_speed;
@@ -117,19 +117,19 @@ void Enemy::StateIdleC(){
 			//反転フラグ
 			m_flip = false;
 			move_flag = true;
-		}
+		}*/
 		//下移動
-		if (player->m_pos.y < m_pos.y && player->m_pos.y>m_pos.y - 200 && player->m_pos.x > m_pos.x - 200 && player->m_pos.x < m_pos.x + 200) {
+		if (player->m_pos.y>m_pos.y - 32 && player->m_pos.x > m_pos.x - 40 && player->m_pos.x < m_pos.x + 40) {
 			//移動量を設定
-			m_pos.y += -move_speed;
+			m_pos.y += move_speed;
 			//反転フラグ
 			m_flip = true;
 			move_flag = true;
 		}
 		//上移動
-		if (player->m_pos.y > m_pos.y && player->m_pos.y<m_pos.y + 200 && player->m_pos.x > m_pos.x - 200 && player->m_pos.x < m_pos.x + 200) {
+		if (player->m_pos.y<m_pos.y + 32 && player->m_pos.x > m_pos.x - 40 && player->m_pos.x < m_pos.x + 40) {
 			//移動量を設定
-			m_pos.y += move_speed;
+			m_pos.y += -move_speed;
 			//反転フラグ
 			m_flip = true;
 			move_flag = true;
