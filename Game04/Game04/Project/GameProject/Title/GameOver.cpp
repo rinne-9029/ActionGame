@@ -4,7 +4,7 @@
 
 GameOver::GameOver():Base(eType_GameOver), m_GameOver_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
 	m_img = COPY_RESOURCE("GameOver", CImage);
-
+	SOUND("bgm")->Stop();
 }
 
 GameOver::~GameOver(){

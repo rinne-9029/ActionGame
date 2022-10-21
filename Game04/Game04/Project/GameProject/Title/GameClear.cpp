@@ -4,6 +4,7 @@
 
 GameClear::GameClear():Base(eType_GameClear), m_GameClear_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
 	m_img = COPY_RESOURCE("GameClear", CImage);
+	SOUND("bgm")->Stop();
 }
 
 GameClear::~GameClear(){

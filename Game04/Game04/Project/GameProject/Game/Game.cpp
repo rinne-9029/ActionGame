@@ -21,10 +21,11 @@
 	  Base::Add(new Map(GameData::stage));
 	  Base::Add(new UI());
 	  Base::Add(new UI2());
+      SOUND("bgm")->Play();
 	}
 
 	Game::~Game() {
-		SOUND("bgm")->Stop();
+		
 }
 
 void Game::Update(){
