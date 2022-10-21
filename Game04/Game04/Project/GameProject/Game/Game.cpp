@@ -25,7 +25,6 @@
 	}
 
 	Game::~Game() {
-		SOUND("bgm")->Play()
 }
 
 void Game::Update(){
