@@ -2,7 +2,7 @@
 #include "../Game/Game.h"
 #include "Title.h"
 
-GameClear::GameClear():Base(eType_GameClear), m_GameClear_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
+GameClear::GameClear():Base(eType_GameClear), m_GameClear_text("C:\\Windows\\Fonts\\msgothic.ttc", 80) {
 	m_img = COPY_RESOURCE("GameClear", CImage);
 	SOUND("bgm")->Stop();
 }

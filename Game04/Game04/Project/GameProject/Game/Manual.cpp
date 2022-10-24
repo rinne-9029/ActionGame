@@ -2,7 +2,7 @@
 #include "../Title/Title.h"
 
 
-Manual::Manual():Base(eType_Manual), m_title_text("C:\\Windows\\Fonts\\msgothic.ttc", 64) {
+Manual::Manual():Base(eType_Manual), m_title_text("C:\\Windows\\Fonts\\msgothic.ttc", 50) {
 	m_img = COPY_RESOURCE("Manual", CImage);
 	pull = false;
 }
@@ -15,8 +15,8 @@ Manual::~Manual(){
 }
 
 void Manual::Update(){
-	//ボタン２で説明終了
-	if (PUSH(CInput::eButton2)) {
+	//ボタン4で説明終了
+	if (PUSH(CInput::eButton4)) {
 		if(pull==true)SetKill();
 	}
 	else
@@ -27,9 +27,11 @@ void Manual::Draw(){
 	//画像表示
 	m_img.Draw();
 	//文字表示
-	m_title_text.Draw(64, 100, 0, 0, 0, "せつめい！");
-	m_title_text.Draw(64, 180, 0, 0, 0, "あなたは水中での作業中に");
-	m_title_text.Draw(64, 240, 0, 0, 0, "仲間とはぐれてしまった");
-	m_title_text.Draw(64, 320, 0, 0, 0, "襲い掛かってくる敵やトラップを");
-	m_title_text.Draw(64, 400, 0, 0, 0, "避けながら仲間のもとにたどり着け");
+	m_title_text.Draw(64, 100, 0, 0, 0, "あなたは水中の探索中に仲間とはぐれてしまった");
+	m_title_text.Draw(64, 180, 0, 0, 0, "敵やトラップを避けながら仲間のもとにたどり着け");
+	m_title_text.Draw(64, 250, 20, 30,50, "操作方法");
+	m_title_text.Draw(64, 310, 20, 30, 50, "WASDキーで上下左右移動");
+	m_title_text.Draw(64, 360, 20, 30, 50, "マウスの左クリックで弾の発射");
+	m_title_text.Draw(400, 410, 50, 0, 0, "サメは倒すことができる！");
+	m_title_text.Draw(800, 710, 20, 30,50, "タイトルに戻る　V");
 }

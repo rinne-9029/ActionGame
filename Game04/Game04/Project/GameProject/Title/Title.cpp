@@ -21,7 +21,7 @@ void Title::Update(){
 		//ゲームシーン
 		Base::Add(new Game());
 	}
-	//ボタン3でタイトルを破棄
+	//ボタン2でタイトルを破棄
 	if (PUSH(CInput::eButton2)) {
 		//全てのオブジェクトを 破棄
 		Base::KillAll();
@@ -29,7 +29,7 @@ void Title::Update(){
 		//ゲームシーン
 		Base::Add(new Game());
 	}
-	//ボタン4でタイトルを破棄
+	//ボタン3でタイトルを破棄
 	if (PUSH(CInput::eButton3)) {
 		//全てのオブジェクトを破棄
 		Base::KillAll();
@@ -37,7 +37,7 @@ void Title::Update(){
 		//ゲームシーン
 		Base::Add(new Game());
 	}
-	//ボタン２でタイトルを破棄
+	//ボタン4でタイトルを破棄
 	if (PUSH(CInput::eButton4)) {
 		//全てのオブジェクトを破棄
 		Base::KillAll();
